@@ -1,0 +1,14 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "ola-pdf": ["../src/index.ts"],
+      "ola-pdf/components": ["../components/index.ts"],
+      "ola-pdf/components/*": ["../components/*.ts"]
+    }
+  },
+  "include": [
+    "./src"
+  ]
+}

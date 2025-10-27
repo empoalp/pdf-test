@@ -1,0 +1,62 @@
+{
+  "name": "ola-pdf",
+  "version": "0.1.0",
+  "description": "React PDF viewer component for Ola applications.",
+  "type": "module",
+  "main": "./dist/ola-pdf.cjs",
+  "module": "./dist/ola-pdf.js",
+  "types": "./dist/ola-pdf.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/ola-pdf.d.ts",
+      "import": "./dist/ola-pdf.js",
+      "require": "./dist/ola-pdf.cjs"
+    },
+    "./components": {
+      "types": "./dist/components/index.d.ts",
+      "import": "./dist/components/index.js",
+      "require": "./dist/components/index.cjs"
+    },
+    "./components/*": {
+      "types": "./dist/components/*.d.ts",
+      "import": "./dist/components/*.js",
+      "require": "./dist/components/*.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "components"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite --config demo/vite.config.ts",
+    "preview": "vite preview --config demo/vite.config.ts",
+    "build:demo": "vite build --config demo/vite.config.ts",
+    "clean": "rm -rf dist node_modules demo/dist"
+  },
+  "keywords": [
+    "pdf",
+    "viewer",
+    "react",
+    "ola"
+  ],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.0",
+    "vite-plugin-dts": "^3.7.0"
+  },
+  "dependencies": {
+    "pdfjs-dist": "^5.4.296"
+  }
+}

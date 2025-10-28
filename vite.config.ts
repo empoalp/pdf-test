@@ -6,7 +6,7 @@ import dts from "vite-plugin-dts";
 export default defineConfig({
   plugins: [
     react(),
-    !process.env.VERCEL && dts({
+    dts({
       entryRoot: "src",
       tsconfigPath: resolve(__dirname, "tsconfig.build.json"),
       rollupTypes: true,
